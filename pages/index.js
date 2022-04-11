@@ -1,8 +1,12 @@
 import Head from "next/head";
+import About from "../components/About";
+import Header from "../components/Header";
+import HomeScreen from "../components/HomeScreen";
+import Skills from "../components/Skills";
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-[#232323] h-full text-[#ECECEC]">
       <Head>
         <title>Joosep Arrak | Frontend Developer</title>
         <meta
@@ -11,6 +15,11 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <Header />
+      <HomeScreen />
+      <About />
+      <Skills />
     </div>
   );
 }
