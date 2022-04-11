@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 function HomeScreen() {
   return (
     <div
@@ -5,16 +7,28 @@ function HomeScreen() {
       className="grid w-full h-screen place-items-center md:py-96 py-[50%]"
     >
       <div className="w-2/3 2xl:pl-40 h-full">
-        <h1 className="leading-none text-4xl md:text-5xl font-semibold">
+        <motion.h1
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5 }}
+          className="leading-none text-4xl md:text-5xl font-semibold"
+        >
           Hello, I&apos;m
           <br />
           Joosep Arrak
-        </h1>
-        <h2 className="leading-none mt-[52px] text-3xl md:text-4xl font-medium">
+        </motion.h1>
+        <motion.h2
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 1.2 }}
+          className="leading-none mt-[52px] text-3xl md:text-4xl font-medium"
+        >
           Frontend
           <br />
           Developer.
-        </h2>
+        </motion.h2>
       </div>
     </div>
   );

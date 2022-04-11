@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 function Skills() {
   return (
@@ -6,17 +7,29 @@ function Skills() {
       id="skills"
       className="flex justify-center items-center bg-[#232323] text-[#ECECEC] w-full h-full md:py-48 py-32"
     >
-      <div className="w-1/2 xl:pl-40 hidden xl:flex items-center justify-center pr-16">
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.3 }}
+        className="w-1/2 xl:pl-40 hidden xl:flex items-center justify-center pr-16"
+      >
         <Image
           src="https://ik.imagekit.io/c0wz4am8etl/Arrak_Portfolio/Skills_j0wOx0rBo.png"
           alt="Skills"
           width="568px"
           height="413px"
         />
-      </div>
+      </motion.div>
 
       <div className="w-full xl:w-1/2 2xl:pl-40 h-full flex flex-col items-center justify-center">
-        <div className="px-10">
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+          className="px-10"
+        >
           <p className="text-base mb-[22px] ">
             <span className="font-bold text-[#F1F1F1] ">/</span> Skills
           </p>
@@ -83,7 +96,7 @@ function Skills() {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

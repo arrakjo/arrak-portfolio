@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 function About() {
   return (
@@ -8,10 +9,22 @@ function About() {
     >
       <div className="w-full xl:w-1/2 2xl:pl-40 h-full flex flex-col items-center justify-center">
         <div className="w-full xl:w-2/3 px-10">
-          <p className="text-base mb-[22px] ">
+          <motion.p
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="text-base mb-[22px] "
+          >
             <span className="font-bold text-[#111111] ">/</span> About me
-          </p>
-          <p className="text-xl md:text-3xl font-medium mb-5 md:mb-6">
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+            className="text-xl md:text-3xl font-medium mb-5 md:mb-6"
+          >
             I&apos;m from <span className="text-[#466EC3] ">Estonia</span>{" "}
             <span>
               <Image
@@ -21,19 +34,43 @@ function About() {
                 height="36px"
               />
             </span>
-          </p>
-          <p className="text-xl md:text-3xl font-medium mb-5 md:mb-6">
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.5 }}
+            className="text-xl md:text-3xl font-medium mb-5 md:mb-6"
+          >
             Self-taught
             <br />
             <span className="text-[#466EC3] ">Frontend Developer</span>.
-          </p>
-          <p className="text-xl md:text-3xl font-medium mb-5 md:mb-6">
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.6 }}
+            className="text-xl md:text-3xl font-medium mb-5 md:mb-6"
+          >
             Specialized with <span className="text-[#466EC3] ">React</span>.
-          </p>
-          <p className="text-xl md:text-3xl font-medium mb-5 md:mb-6">
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.7 }}
+            className="text-xl md:text-3xl font-medium mb-5 md:mb-6"
+          >
             I build &#38; design stuff.
-          </p>
-          <p className="text-xl md:text-3xl font-medium mb-5 md:mb-6 md:pt-3 md:leading-4">
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.8 }}
+            className="text-xl md:text-3xl font-medium mb-5 md:mb-6 md:pt-3 md:leading-4"
+          >
             I also create —<br />
             sing and play guitar{" "}
             <span>
@@ -44,19 +81,31 @@ function About() {
                 height="36px"
               />
             </span>
-          </p>
+          </motion.p>
 
           {/* Ellipse image, only visible on smaller screens */}
-          <div className="flex lg:hidden mt-10">
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 1.0 }}
+            className="flex lg:hidden mt-10"
+          >
             <Image
               src="https://ik.imagekit.io/c0wz4am8etl/Arrak_Portfolio/Live_alt.png"
               alt="Live alt"
               width="154px"
               height="154px"
             />
-          </div>
+          </motion.div>
 
-          <div className="mt-10 md:mt-14">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 1.2 }}
+            className="mt-10 md:mt-14"
+          >
             <a
               className="uppercase cursor-pointer bg-[#232323] text-[#ECECEC] p-4 text-sm font-medium md:p-4 md:text-base hover:opacity-90 duration-150"
               href="https://linkedin.com/in/jooseparrak"
@@ -65,18 +114,24 @@ function About() {
             >
               Full Resume
             </a>
-          </div>
+          </motion.div>
         </div>
       </div>
       {/* Full image, only visible on larger screens */}
-      <div className="w-1/2 hidden lg:flex items-center justify-center pr-16">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.6 }}
+        className="w-1/2 hidden lg:flex items-center justify-center pr-16"
+      >
         <Image
           src="https://ik.imagekit.io/c0wz4am8etl/Arrak_Portfolio/Live.jpg"
           alt="Live Performance"
           width="387px"
           height="580px"
         />
-      </div>
+      </motion.div>
     </div>
   );
 }
