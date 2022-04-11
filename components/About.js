@@ -63,7 +63,7 @@ function About() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              View Resume
+              Full Resume
             </a>
           </div>
         </div>
