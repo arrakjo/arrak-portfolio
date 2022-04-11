@@ -2,6 +2,7 @@ import Head from "next/head";
 import About from "../components/About";
 import Header from "../components/Header";
 import HomeScreen from "../components/HomeScreen";
+import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
       <HomeScreen />
       <About />
       <Skills />
+      <Projects />
     </div>
   );
 }

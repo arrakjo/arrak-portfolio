@@ -3,7 +3,7 @@ import Image from "next/image";
 function Skills() {
   return (
     <div
-      id="about"
+      id="skills"
       className="flex justify-center items-center bg-[#232323] text-[#ECECEC] w-full h-full md:py-48 py-32"
     >
       <div className="w-1/2 xl:pl-40 hidden xl:flex items-center justify-center pr-16">
