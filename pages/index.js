@@ -1,5 +1,6 @@
 import Head from "next/head";
 import About from "../components/About";
+import Experience from "../components/Experience";
 import Header from "../components/Header";
 import HomeScreen from "../components/HomeScreen";
 import Projects from "../components/Projects";
@@ -22,6 +23,7 @@ export default function Home() {
       <About />
       <Skills />
       <Projects />
+      <Experience />
     </div>
   );
 }
