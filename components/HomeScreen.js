@@ -4,7 +4,7 @@ function HomeScreen() {
   return (
     <div
       id="home"
-      className="grid w-full h-screen place-items-center md:py-96 py-[50%]"
+      className="grid w-full h-screen place-items-center md:py-64 py-[50%]"
     >
       <div className="w-2/3 2xl:pl-40 h-full">
         <motion.h1

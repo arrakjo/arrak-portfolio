@@ -27,7 +27,7 @@ function Experience() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.4 }}
-        className="w-full xl:w-1/2 2xl:pl-40 h-full flex flex-col justify-center"
+        className="w-full xl:w-1/2 2xl:pl-20 h-full flex flex-col justify-center"
       >
         <div className="px-10">
           <p className="text-base mb-[22px] ">

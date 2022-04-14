@@ -23,7 +23,7 @@ function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
-            className="text-xl md:text-3xl font-medium mb-5 md:mb-6"
+            className="text-xl md:text-2xl font-medium mb-5 md:mb-6"
           >
             I&apos;m from <span className="text-[#466EC3] ">Estonia</span>{" "}
             <span>
@@ -40,7 +40,7 @@ function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.5 }}
-            className="text-xl md:text-3xl font-medium mb-5 md:mb-6"
+            className="text-xl md:text-2xl font-medium mb-5 md:mb-6"
           >
             Self-taught
             <br />
@@ -51,7 +51,7 @@ function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.6 }}
-            className="text-xl md:text-3xl font-medium mb-5 md:mb-6"
+            className="text-xl md:text-2xl font-medium mb-5 md:mb-6"
           >
             Specialized with <span className="text-[#466EC3] ">React</span>.
           </motion.p>
@@ -60,7 +60,7 @@ function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.7 }}
-            className="text-xl md:text-3xl font-medium mb-5 md:mb-6"
+            className="text-xl md:text-2xl font-medium mb-5 md:mb-6"
           >
             I build &#38; design stuff.
           </motion.p>
@@ -69,7 +69,7 @@ function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.8 }}
-            className="text-xl md:text-3xl font-medium mb-5 md:mb-6 md:pt-3 md:leading-4"
+            className="text-xl md:text-2xl font-medium mb-5 md:mb-6 md:pt-3 md:leading-4"
           >
             I also create —<br />
             sing and play guitar{" "}

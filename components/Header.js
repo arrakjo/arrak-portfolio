@@ -37,6 +37,7 @@ function Header() {
           <motion.nav
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.4 }}
             isOpen={menuOpen}
             className="md:w-96 w-72 h-screen bg-[#333333] flex flex-col justify-between py-7"
           >
@@ -46,33 +47,66 @@ function Header() {
               </button>
             </div>
 
-            <div className="flex flex-col pl-8 font-medium text-2xl space-y-4">
-              <a onClick={closeMenu} href="#home">
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4 }}
+              className="flex flex-col pl-8 font-medium text-xl md:text-2xl space-y-3 md:space-y-4"
+            >
+              <a
+                className="hover:opacity-80 duration-150"
+                onClick={closeMenu}
+                href="#home"
+              >
                 Home
               </a>
-              <a onClick={closeMenu} href="#about">
+              <a
+                className="hover:opacity-80 duration-150"
+                onClick={closeMenu}
+                href="#about"
+              >
                 About
               </a>
-              <a onClick={closeMenu} href="#skills">
+              <a
+                className="hover:opacity-80 duration-150"
+                onClick={closeMenu}
+                href="#skills"
+              >
                 Skills
               </a>
-              <a onClick={closeMenu} href="#projects">
+              <a
+                className="hover:opacity-80 duration-150"
+                onClick={closeMenu}
+                href="#projects"
+              >
                 Projects
               </a>
-              <a onClick={closeMenu} href="#experience">
+              <a
+                className="hover:opacity-80 duration-150"
+                onClick={closeMenu}
+                href="#experience"
+              >
                 Experience
               </a>
-              <a onClick={closeMenu} href="#contact">
+              <a
+                className="hover:opacity-80 duration-150"
+                onClick={closeMenu}
+                href="#contact"
+              >
                 Contact
               </a>
-            </div>
+            </motion.div>
 
-            <div>
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.4 }}
+            >
               <button
                 onClick={() =>
                   window.open("https://linkedin.com/in/jooseparrak", "_blank")
                 }
-                className="w-fit flex justify-center items-center mt-16 ml-8 px-4 py-2 text-sm font-medium md:px-4 md:py-2 md:text-base hover:opacity-90 duration-150 uppercase bg-[#ECECEC] text-[#232323] "
+                className="w-fit flex justify-center items-center mt-16 ml-8 px-4 py-2 text-sm font-medium md:px-4 md:py-2 hover:opacity-90 duration-150 uppercase bg-[#ECECEC] text-[#232323] "
               >
                 <span className="mr-4">
                   <Image
@@ -84,16 +118,19 @@ function Header() {
                 </span>
                 Full Resume
               </button>
-            </div>
+            </motion.div>
           </motion.nav>
         </div>
       )}
 
       {menuOpen && (
-        <div
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 0.26 }}
+          transition={{ duration: 0.4 }}
           onClick={closeMenu}
-          className="absolute top-0 left-0 z-40 bg-black opacity-30 w-screen h-screen"
-        ></div>
+          className="absolute top-0 left-0 z-40 bg-black w-screen h-screen"
+        ></motion.div>
       )}
     </header>
   );

@@ -22,7 +22,7 @@ function Skills() {
         />
       </motion.div>
 
-      <div className="w-full xl:w-1/2 2xl:pl-40 h-full flex flex-col items-center justify-center">
+      <div className="w-full xl:w-1/2 2xl:pl-20 h-full flex flex-col items-center justify-center">
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
