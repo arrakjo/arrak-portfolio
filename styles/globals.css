@@ -26,3 +26,10 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #777;
 }
+
+::selection {
+  background: #94d2bd; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #94d2bd; /* Gecko Browsers */
+}

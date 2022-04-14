@@ -12,11 +12,11 @@ function HomeScreen() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
-          className="leading-none text-4xl md:text-5xl font-semibold"
+          className="leading-none text-4xl md:text-5xl font-light"
         >
-          Hello, I&apos;m
+          <span className="font-medium">Hello,</span> I&apos;m
           <br />
-          Joosep Arrak
+          <span className="font-light">Joosep Arrak</span>
         </motion.h1>
         <motion.h2
           initial={{ opacity: 0 }}
