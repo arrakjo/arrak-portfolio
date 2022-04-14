@@ -8,4 +8,8 @@ module.exports = {
   images: {
     domains: ["ik.imagekit.io"],
   },
+  i18n: {
+    locales: ["en"],
+    defaultLocale: "en",
+  },
 };

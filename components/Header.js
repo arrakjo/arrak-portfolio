@@ -28,7 +28,7 @@ function Header() {
         </a>
       </div>
 
-      <button onClick={openMenu}>
+      <button onClick={openMenu} aira-label="Open menu">
         <MenuAlt1Icon className="h-12 rotate-180 cursor-pointer" />
       </button>
 
@@ -42,7 +42,7 @@ function Header() {
             className="md:w-96 w-72 h-screen bg-[#333333] flex flex-col justify-between py-7"
           >
             <div className="flex justify-end pr-7">
-              <button onClick={closeMenu}>
+              <button onClick={closeMenu} aria-label="Close">
                 <XIcon className="h-12 cursor-pointer" />
               </button>
             </div>
@@ -106,7 +106,8 @@ function Header() {
                 onClick={() =>
                   window.open("https://linkedin.com/in/jooseparrak", "_blank")
                 }
-                className="w-fit flex justify-center items-center mt-16 ml-8 px-4 py-2 text-sm font-medium md:px-4 md:py-2 hover:opacity-90 duration-150 uppercase bg-[#ECECEC] text-[#232323] "
+                className="w-fit flex justify-center items-center mt-16 ml-8 px-4 py-2 text-sm font-medium md:px-4 md:py-2 hover:opacity-90 duration-150 uppercase bg-[#ECECEC] text-[#232323]"
+                aria-label="View resume"
               >
                 <span className="mr-4">
                   <Image
