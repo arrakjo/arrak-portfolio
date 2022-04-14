@@ -106,7 +106,7 @@ function Header() {
                 onClick={() =>
                   window.open("https://linkedin.com/in/jooseparrak", "_blank")
                 }
-                className="w-fit flex justify-center items-center mt-16 ml-8 px-4 py-2 text-sm font-medium md:px-4 md:py-2 hover:opacity-90 duration-150 uppercase bg-[#ECECEC] text-[#232323]"
+                className="w-fit flex justify-center items-center mt-16 ml-8 mb-12 md:mb-4 px-4 py-2 text-sm font-medium md:px-4 md:py-2 hover:opacity-90 duration-150 uppercase bg-[#ECECEC] text-[#232323]"
                 aria-label="View resume"
               >
                 <span className="mr-4">
