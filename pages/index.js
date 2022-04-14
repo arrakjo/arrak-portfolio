@@ -7,16 +7,42 @@ import HomeScreen from "../components/HomeScreen";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 
+let pageTitle = "Joosep Arrak - Frontend Developer";
+let description = "Personal Portfolio of Joosep Arrak - Frontend Developer";
+let currentURL = "https://www.arrak.dev";
+let siteName = "Frontend Developer Joosep Arrak";
+let previewImage = "https://www.arrak.dev/img/socialcardlarge.png";
+let twitterHandle = "@arrakdev";
+
 export default function Home() {
   return (
     <div className="bg-[#232323] h-full text-[#ECECEC]">
       <Head>
-        <title>Joosep Arrak | Frontend Developer</title>
-        <meta
-          name="description"
-          content="Arrak.dev | Personal Portfolio of Joosep Arrak"
-        />
+        <title>{pageTitle}</title>
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="utf-8" />
         <link rel="icon" href="/favicon.ico" />
+
+        {/* Open Graph */}
+        <meta property="og:url" content={currentURL} key="ogurl" />
+        <meta property="og:image" content={previewImage} key="ogimage" />
+        <meta property="og:site_name" content={siteName} key="ogsitename" />
+        <meta property="og:title" content={pageTitle} key="ogtitle" />
+        <meta property="og:description" content={description} key="ogdesc" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" key="twcard" />
+        <meta name="twitter:creator" content={twitterHandle} key="twhandle" />
+        <meta
+          name="twitter:title"
+          content="Joosep Arrak - Frontend Developer"
+        />
+        <meta
+          name="twitter:description"
+          content="Personal Portfolio of Joosep Arrak - Frontend Developer with React specialization"
+        />
+        <meta name="twitter:image" content={previewImage} />
       </Head>
 
       <Header />
