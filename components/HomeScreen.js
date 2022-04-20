@@ -25,7 +25,7 @@ function HomeScreen() {
           transition={{ delay: 1.2 }}
           className="leading-none mt-[52px] text-3xl md:text-4xl font-medium"
         >
-          Frontend
+          Front-end
           <br />
           Developer.
         </motion.h2>

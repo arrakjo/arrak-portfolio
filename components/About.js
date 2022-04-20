@@ -44,7 +44,7 @@ function About() {
           >
             Self-taught
             <br />
-            <span className="text-[#466EC3] ">Frontend Developer</span>.
+            <span className="text-[#466EC3] ">Front-end Developer</span>.
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 100 }}

@@ -7,10 +7,11 @@ import HomeScreen from "../components/HomeScreen";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 
-let pageTitle = "Joosep Arrak - Frontend Developer";
-let description = "Personal Portfolio of Joosep Arrak - Frontend Developer";
+let pageTitle = "Joosep Arrak - Front-end Developer";
+let description =
+  "Personal Portfolio of Joosep Arrak - Front-end Developer with React specialization";
 let currentURL = "https://www.arrak.dev";
-let siteName = "Frontend Developer Joosep Arrak";
+let siteName = "Front-end Developer Joosep Arrak";
 let previewImage = "https://www.arrak.dev/img/socialcardlarge.png";
 let twitterHandle = "@arrakdev";
 
@@ -34,14 +35,8 @@ export default function Home() {
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" key="twcard" />
         <meta name="twitter:creator" content={twitterHandle} key="twhandle" />
-        <meta
-          name="twitter:title"
-          content="Joosep Arrak - Frontend Developer"
-        />
-        <meta
-          name="twitter:description"
-          content="Personal Portfolio of Joosep Arrak - Frontend Developer with React specialization"
-        />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={previewImage} />
       </Head>
 
