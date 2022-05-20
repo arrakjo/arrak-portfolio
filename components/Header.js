@@ -23,8 +23,11 @@ function Header() {
         >
           t.me/jooseparrak
         </a>
-        <a href="mailto:hello@arrak.dev" className="text-base font-light">
-          hello@arrak.dev
+        <a
+          href="mailto:jooseparrak@hotmail.com"
+          className="text-base font-light"
+        >
+          jooseparrak@hotmail.com
         </a>
       </div>
 

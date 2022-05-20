@@ -39,8 +39,8 @@ function Contact() {
                 width={36}
                 height={36}
               />
-              <a href="mailto:hello@arrak.dev" className="ml-6">
-                hello@arrak.dev
+              <a href="mailto:jooseparrak@hotmail.com" className="ml-6">
+                jooseparrak@hotmail.com
               </a>
             </div>
             <div className="flex items-center text-base mb-4">
