@@ -71,7 +71,7 @@ function About() {
             transition={{ delay: 0.8 }}
             className="text-xl md:text-2xl font-medium mb-5 md:mb-6 md:pt-3 md:leading-4"
           >
-            I also create —<br />
+            I also entertain —<br />
             sing and play guitar{" "}
             <span>
               <Image
