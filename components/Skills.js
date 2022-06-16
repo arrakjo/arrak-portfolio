@@ -1,5 +1,24 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
+import SkillsSVG from "../public/img/Skills.svg";
+
+const techSkills = [
+  "Next.js",
+  "React.js",
+  "Javascript",
+  "HTML/CSS",
+  "Tailwind CSS",
+  "Styled Components",
+  "React Native",
+];
+const cloudSkills = [
+  "Firebase",
+  "Sanity CMS",
+  "GraphCMS",
+  "Vercel",
+  "Google Cloud Platform",
+];
+const designSkills = ["Figma", "Vectr", "Adobe XD"];
 
 function Skills() {
   return (
@@ -14,12 +33,7 @@ function Skills() {
         transition={{ delay: 0.3 }}
         className="w-1/2 xl:pl-40 hidden xl:flex items-center justify-center pr-16"
       >
-        <Image
-          src="https://ik.imagekit.io/c0wz4am8etl/Arrak_Portfolio/Skills_j0wOx0rBo.png"
-          alt="Skills"
-          width="568px"
-          height="413px"
-        />
+        <Image src={SkillsSVG} alt="Skills" width={402} height={526} priority />
       </motion.div>
 
       <div className="w-full xl:w-1/2 2xl:pl-20 h-full flex flex-col items-center justify-center">
@@ -38,27 +52,14 @@ function Skills() {
               Tech.
             </h3>
             <div className="flex w-full md:w-2/3 flex-wrap">
-              <p className="uppercase text-sm md:text-base border flex justify-center items-center w-max mr-4 mt-4 border-[#ececec] py-2 px-3 ">
-                Next.js
-              </p>
-              <p className="uppercase text-sm md:text-base border flex justify-center items-center w-max mr-4 mt-4 border-[#ececec] py-2 px-3 ">
-                React.js
-              </p>
-              <p className="uppercase text-sm md:text-base border flex justify-center items-center w-max mr-4 mt-4 border-[#ececec] py-2 px-3 ">
-                JavaScript
-              </p>
-              <p className="uppercase text-sm md:text-base border flex justify-center items-center w-max mr-4 mt-4 border-[#ececec] py-2 px-3 ">
-                HTML/CSS
-              </p>
-              <p className="uppercase text-sm md:text-base border flex justify-center items-center w-max mr-4 mt-4 border-[#ececec] py-2 px-3 ">
-                Tailwind CSS
-              </p>
-              <p className="uppercase text-sm md:text-base border flex justify-center items-center w-max mr-4 mt-4 border-[#ececec] py-2 px-3 ">
-                Styled Components
-              </p>
-              <p className="uppercase text-sm md:text-base border flex justify-center items-center w-max mr-4 mt-4 border-[#ececec] py-2 px-3 ">
-                React Native
-              </p>
+              {techSkills.map((i) => (
+                <p
+                  key={i}
+                  className="uppercase text-sm md:text-base border flex justify-center items-center w-max mr-4 mt-4 border-[#ececec] py-2 px-3 "
+                >
+                  {i}
+                </p>
+              ))}
             </div>
           </div>
           <div className="mt-10">
@@ -66,18 +67,14 @@ function Skills() {
               Cloud.
             </h3>
             <div className="flex w-full md:w-2/3 flex-wrap">
-              <p className="uppercase text-sm md:text-base border flex justify-center items-center w-max mr-4 mt-4 border-[#ececec] py-2 px-3 ">
-                Firebase
-              </p>
-              <p className="uppercase text-sm md:text-base border flex justify-center items-center w-max mr-4 mt-4 border-[#ececec] py-2 px-3 ">
-                Sanity CMS
-              </p>
-              <p className="uppercase text-sm md:text-base border flex justify-center items-center w-max mr-4 mt-4 border-[#ececec] py-2 px-3 ">
-                Vercel
-              </p>
-              <p className="uppercase text-sm md:text-base border flex justify-center items-center w-max mr-4 mt-4 border-[#ececec] py-2 px-3 ">
-                Google Cloud Platform
-              </p>
+              {cloudSkills.map((i) => (
+                <p
+                  key={i}
+                  className="uppercase text-sm md:text-base border flex justify-center items-center w-max mr-4 mt-4 border-[#ececec] py-2 px-3 "
+                >
+                  {i}
+                </p>
+              ))}
             </div>
           </div>
           <div className="mt-10">
@@ -85,15 +82,14 @@ function Skills() {
               Design.
             </h3>
             <div className="flex w-full md:w-2/3 flex-wrap">
-              <p className="uppercase text-sm md:text-base border flex justify-center items-center w-max mr-4 mt-4 border-[#ececec] py-2 px-3 ">
-                Figma
-              </p>
-              <p className="uppercase text-sm md:text-base border flex justify-center items-center w-max mr-4 mt-4 border-[#ececec] py-2 px-3 ">
-                Vectr
-              </p>
-              <p className="uppercase text-sm md:text-base border flex justify-center items-center w-max mr-4 mt-4 border-[#ececec] py-2 px-3 ">
-                Adobe XD
-              </p>
+              {designSkills.map((i) => (
+                <p
+                  key={i}
+                  className="uppercase text-sm md:text-base border flex justify-center items-center w-max mr-4 mt-4 border-[#ececec] py-2 px-3 "
+                >
+                  {i}
+                </p>
+              ))}
             </div>
           </div>
         </motion.div>
