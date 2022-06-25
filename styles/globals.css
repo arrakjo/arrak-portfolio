@@ -37,3 +37,20 @@ html {
 ::-moz-selection {
   background: #94d2bd; /* Gecko Browsers */
 }
+
+.animoSpinner1 {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #f1f1f1;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spinner1 1.3s linear infinite;
+}
+@keyframes spinner1 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

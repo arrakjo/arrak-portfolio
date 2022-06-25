@@ -2,38 +2,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import ExperienceSVG from "../public/img/Experience.svg";
 
-const data = [
-  {
-    id: 1,
-    position: "Business Support Specialist & Product Expert",
-    company: "Wise (formerly TransferWise)",
-    start: "Apr 2021",
-    end: "Present",
-  },
-  {
-    id: 2,
-    position: "Front Office Service Manager",
-    company: "Original Sokos Hotel Viru",
-    start: "Apr 2017",
-    end: "Jul 2020",
-  },
-  {
-    id: 3,
-    position: "Delivery Driver",
-    company: "FoodHunt OÜ",
-    start: "Apr 2016",
-    end: "Jan 2017",
-  },
-  {
-    id: 4,
-    position: "Porter",
-    company: "Original Sokos Hotel Viru",
-    start: "Jul 2015",
-    end: "Jan 2016",
-  },
-];
-
-function Experience() {
+function Experience({ employmentData }) {
   return (
     <div
       id="experience"
@@ -68,7 +37,7 @@ function Experience() {
           </p>
         </div>
 
-        {data.splice(0, 4).map((item) => (
+        {employmentData.splice(0, 4).map((item) => (
           <div key={item.id} className="flex w-full px-5 mt-2 mb-10">
             {/* XP "bar" CSS */}
             <div>

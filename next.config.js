@@ -6,7 +6,7 @@ const nextConfig = {
 module.exports = {
   nextConfig,
   images: {
-    domains: ["ik.imagekit.io"],
+    domains: ["ik.imagekit.io", "media.graphassets.com"],
   },
   i18n: {
     locales: ["en"],

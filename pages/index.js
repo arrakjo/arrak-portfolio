@@ -6,6 +6,9 @@ import Header from "../components/Header";
 import HomeScreen from "../components/HomeScreen";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
+import { GraphQLClient, gql } from "graphql-request";
+import { useState, useEffect } from "react";
+import Loader from "../components/Loader";
 
 let pageTitle = "Joosep Arrak - Front-end Developer";
 let description =
@@ -15,38 +18,99 @@ let siteName = "Front-end Developer Joosep Arrak";
 let previewImage = "https://www.arrak.dev/img/socialcardlarge.png";
 let twitterHandle = "@arrakdev";
 
-export default function Home() {
+const graphcms = new GraphQLClient(process.env.GRAPH_CMS_MASTER);
+
+export default function Home({ projects, employments }) {
+  const [domLoaded, setDomLoaded] = useState(false);
+
+  useEffect(() => {
+    setDomLoaded(true);
+  }, []);
+
   return (
-    <div className="bg-[#232323] h-full text-[#ECECEC]">
-      <Head>
-        <title>{pageTitle}</title>
-        <meta name="description" content={description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charSet="utf-8" />
-        <link rel="icon" href="/favicon.ico" />
+    <>
+      {domLoaded ? (
+        <div className="bg-[#232323] h-full text-[#ECECEC]">
+          <Head>
+            <title>{pageTitle}</title>
+            <meta name="description" content={description} />
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1"
+            />
+            <meta charSet="utf-8" />
+            <link rel="icon" href="/favicon.ico" />
 
-        {/* Open Graph */}
-        <meta property="og:url" content={currentURL} key="ogurl" />
-        <meta property="og:image" content={previewImage} key="ogimage" />
-        <meta property="og:site_name" content={siteName} key="ogsitename" />
-        <meta property="og:title" content={pageTitle} key="ogtitle" />
-        <meta property="og:description" content={description} key="ogdesc" />
+            {/* Open Graph */}
+            <meta property="og:url" content={currentURL} key="ogurl" />
+            <meta property="og:image" content={previewImage} key="ogimage" />
+            <meta property="og:site_name" content={siteName} key="ogsitename" />
+            <meta property="og:title" content={pageTitle} key="ogtitle" />
+            <meta
+              property="og:description"
+              content={description}
+              key="ogdesc"
+            />
 
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" key="twcard" />
-        <meta name="twitter:creator" content={twitterHandle} key="twhandle" />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={previewImage} />
-      </Head>
+            {/* Twitter */}
+            <meta
+              name="twitter:card"
+              content="summary_large_image"
+              key="twcard"
+            />
+            <meta
+              name="twitter:creator"
+              content={twitterHandle}
+              key="twhandle"
+            />
+            <meta name="twitter:title" content={pageTitle} />
+            <meta name="twitter:description" content={description} />
+            <meta name="twitter:image" content={previewImage} />
+          </Head>
 
-      <Header />
-      <HomeScreen />
-      <About />
-      <Skills />
-      <Projects />
-      <Experience />
-      <Contact />
-    </div>
+          <Header />
+          <HomeScreen />
+          <About />
+          <Skills />
+          <Projects projectData={projects} />
+          <Experience employmentData={employments} />
+          <Contact />
+        </div>
+      ) : (
+        <Loader />
+      )}
+    </>
   );
+}
+
+export async function getServerSideProps() {
+  const QUERY = gql`
+    {
+      projects(orderBy: createdAt_ASC) {
+        id
+        name
+        url
+        description
+        image {
+          url
+        }
+      }
+      employments(orderBy: createdAt_DESC) {
+        id
+        position
+        company
+        start
+        end
+      }
+    }
+  `;
+
+  const { projects, employments } = await graphcms.request(QUERY);
+
+  return {
+    props: {
+      projects,
+      employments,
+    },
+  };
 }
