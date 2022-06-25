@@ -105,7 +105,7 @@ function Contact() {
                 I&apos;ve built this page using
               </h4>
               <p className="text-xs uppercase mt-2">
-                Next.js / Tailwind / Vercel
+                Next.js / Tailwind / GraphCMS / Vercel
               </p>
             </div>
 
