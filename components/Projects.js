@@ -44,7 +44,9 @@ function Projects({ projectData }) {
                 />
               </div>
               <div className="flex flex-col p-3 bg-[#F3F3F3] w-[300px] h-fit rounded-b-md ">
-                <h3 className="text-base font-medium">{item.name}</h3>
+                <h3 className="text-base font-semibold opacity-90">
+                  {item.name}
+                </h3>
                 <p className="text-xs uppercase text-[#666666] mt-1">
                   {item.description}
                 </p>

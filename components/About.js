@@ -25,7 +25,7 @@ function About() {
             transition={{ delay: 0.4 }}
             className="text-xl md:text-2xl font-medium mb-5 md:mb-6"
           >
-            I&apos;m from <span className="text-[#466EC3] ">Estonia</span>{" "}
+            I&apos;m from <span className="text-[#466EC3]">Estonia</span>{" "}
             <span>
               <Image
                 src="https://ik.imagekit.io/c0wz4am8etl/Arrak_Portfolio/estonia.png"
