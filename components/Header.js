@@ -14,22 +14,6 @@ function Header() {
       <a href="#home" className="text-4xl font-medium">
         Arrak.
       </a>
-      <div className="hidden lg:flex lg:space-x-14 lg:max-w-5xl lg:w-9/12 ">
-        <a
-          href="https://t.me/jooseparrak"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-base font-light"
-        >
-          t.me/jooseparrak
-        </a>
-        <a
-          href="mailto:jooseparrak@hotmail.com"
-          className="text-base font-light"
-        >
-          jooseparrak@hotmail.com
-        </a>
-      </div>
 
       <button onClick={openMenu} aira-label="Open menu">
         <MenuAlt1Icon className="h-12 rotate-180 cursor-pointer" />

@@ -45,22 +45,6 @@ function Contact() {
             </div>
             <div className="flex items-center text-base mb-4">
               <Image
-                src="https://ik.imagekit.io/c0wz4am8etl/Arrak_Portfolio/telegram_e9UGI7ylN.png"
-                alt="Telegram"
-                width={36}
-                height={36}
-              />
-              <a
-                href="https://t.me/jooseparrak"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ml-6"
-              >
-                t.me/jooseparrak
-              </a>
-            </div>
-            <div className="flex items-center text-base mb-4">
-              <Image
                 src="https://ik.imagekit.io/c0wz4am8etl/Arrak_Portfolio/linkedin_8ds_suOKj.png"
                 alt="LinkedIn"
                 width={36}
