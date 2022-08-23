@@ -106,15 +106,15 @@ function About() {
             transition={{ delay: 1.2 }}
             className="mt-10 md:mt-14"
           >
-            <button
-              onClick={() =>
-                window.open("https://linkedin.com/in/jooseparrak", "_blank")
-              }
+            <a
+              href="https://linkedin.com/in/jooseparrak"
+              target="_blank"
+              rel="noreferrer"
               className="uppercase cursor-pointer bg-[#232323] text-[#ECECEC] p-4 text-sm font-medium md:p-4 md:text-base hover:opacity-90 duration-150"
               aria-label="View resume"
             >
               Full Resume
-            </button>
+            </a>
           </motion.div>
         </div>
       </div>

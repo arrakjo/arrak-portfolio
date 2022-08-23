@@ -90,6 +90,7 @@ export async function getServerSideProps() {
         id
         name
         url
+        sourceUrl
         description
         image {
           url

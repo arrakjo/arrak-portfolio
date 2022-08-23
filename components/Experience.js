@@ -60,10 +60,10 @@ function Experience({ employmentData }) {
           </div>
         ))}
 
-        <button
-          onClick={() =>
-            window.open("https://linkedin.com/in/jooseparrak", "_blank")
-          }
+        <a
+          href="https://linkedin.com/in/jooseparrak"
+          target="_blank"
+          rel="noreferrer"
           className="w-fit flex justify-center items-center mt-16 ml-11 px-4 py-2 text-sm font-medium md:px-4 md:py-2 md:text-base hover:opacity-90 duration-150 uppercase bg-[#ECECEC] text-[#232323]"
           aria-label="View resume"
         >
@@ -76,7 +76,7 @@ function Experience({ employmentData }) {
             />
           </span>
           Full Resume
-        </button>
+        </a>
       </motion.div>
     </div>
   );

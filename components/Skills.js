@@ -10,6 +10,7 @@ const techSkills = [
   "Tailwind CSS",
   "Styled Components",
   "React Native",
+  "WordPress",
 ];
 const cloudSkills = [
   "Firebase",
