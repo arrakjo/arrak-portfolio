@@ -8,9 +8,41 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Urbanist";
+  src: url("/font/Urbanist-VariableFont_wght.ttf");
+  font-display: swap;
+}
+
 html {
-  font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
+}
+
+body {
+  background-color: #070606;
+  color: #f8f9f9;
+  font-family: "Urbanist", system-ui, -apple-system, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.h1 {
+  letter-spacing: 0.095em;
+}
+
+.gradient-primary {
+  background: #970d1a;
+  background: linear-gradient(to bottom right, #970d1a 0%, #4e204d 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-secondary {
+  background: #ff9c60;
+  background: linear-gradient(to bottom right, #ff9c60 0%, #ffd6b8 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .svg-bg {
@@ -35,13 +67,6 @@ html {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #777;
-}
-
-::selection {
-  background: #94d2bd; /* WebKit/Blink Browsers */
-}
-::-moz-selection {
-  background: #94d2bd; /* Gecko Browsers */
 }
 
 .animoSpinner1 {

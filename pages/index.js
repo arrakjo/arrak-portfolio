@@ -9,6 +9,8 @@ import Skills from "../components/Skills";
 import { GraphQLClient, gql } from "graphql-request";
 import { useState, useEffect } from "react";
 import Loader from "../components/Loader";
+import Intro from "../components/Intro";
+import IconBlock from "../components/IconBlock";
 
 let pageTitle = "Joosep Arrak - Front-end Developer";
 let description =
@@ -30,7 +32,7 @@ export default function Home({ projects, employments }) {
   return (
     <>
       {domLoaded ? (
-        <div className="bg-[#232323] h-full text-[#ECECEC]">
+        <div className="w-full h-full max-w-7xl mx-auto">
           <Head>
             <title>{pageTitle}</title>
             <meta name="description" content={description} />
@@ -68,13 +70,16 @@ export default function Home({ projects, employments }) {
             <meta name="twitter:image" content={previewImage} />
           </Head>
 
-          <Header />
+          <Intro />
+          <IconBlock />
+
+          {/* <Header />
           <HomeScreen />
           <About />
           <Skills />
           <Projects projectData={projects} />
           <Experience employmentData={employments} />
-          <Contact />
+          <Contact /> */}
         </div>
       ) : (
         <Loader />
