@@ -10,7 +10,7 @@ function Intro() {
           </h1>
         </Parallax>
         <Parallax speed={-500} translateY={[-200, 200]} translateX={[-25, 25]}>
-          <p className="gradient-primary text-2xl md:text-4xl font-medium opacity-80 text-center">
+          <p className="gradient-primary text-2xl md:text-4xl font-medium text-center">
             Frontend Developer
           </p>
         </Parallax>
