@@ -1,5 +1,4 @@
 import Head from "next/head";
-import About from "../components/About";
 import Contact from "../components/Contact";
 import Experience from "../components/Experience";
 import Header from "../components/Header";
@@ -11,6 +10,7 @@ import { useState, useEffect } from "react";
 import Loader from "../components/Loader";
 import Intro from "../components/Intro";
 import IconBlock from "../components/IconBlock";
+import About from "../components/About";
 
 let pageTitle = "Joosep Arrak - Front-end Developer";
 let description =
@@ -72,6 +72,7 @@ export default function Home({ projects, employments }) {
 
           <Intro />
           <IconBlock />
+          <About />
 
           {/* <Header />
           <HomeScreen />
