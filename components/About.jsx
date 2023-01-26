@@ -5,7 +5,7 @@ import ThisIsMe from "../public/img/thisisme.svg";
 
 function About() {
   return (
-    <section className="w-full min-h-screen p-5 flex flex-col md:flex-row gap-5 items-center justify-center overflow-hidden">
+    <section className="w-full min-h-screen p-5 flex flex-col md:flex-row gap-5 items-center justify-center">
       <Parallax
         speed={-10}
         translateY={[-50, 50]}

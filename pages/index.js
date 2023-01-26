@@ -1,20 +1,14 @@
 import Head from "next/head";
-import Contact from "../components/Contact";
-import Experience from "../components/Experience";
-import Header from "../components/Header";
-import HomeScreen from "../components/HomeScreen";
-import Projects from "../components/Projects";
-import Skills from "../components/Skills";
 import { GraphQLClient, gql } from "graphql-request";
 import { useState, useEffect } from "react";
 import Loader from "../components/Loader";
 import Intro from "../components/Intro";
 import IconBlock from "../components/IconBlock";
 import About from "../components/About";
+import Projects from "../components/Projects";
 
 let pageTitle = "Joosep Arrak - Front-end Developer";
-let description =
-  "Personal Portfolio of Joosep Arrak - Front-end Developer with React specialization";
+let description = "Personal Portfolio of Joosep Arrak - Front-end Developer";
 let currentURL = "https://www.arrak.dev";
 let siteName = "Front-end Developer Joosep Arrak";
 let previewImage = "https://www.arrak.dev/img/socialcardlarge.png";
@@ -22,7 +16,7 @@ let twitterHandle = "@arrakdev";
 
 const graphcms = new GraphQLClient(process.env.GRAPH_CMS_MASTER);
 
-export default function Home({ projects, employments }) {
+export default function Home({ projects, employments, skills }) {
   const [domLoaded, setDomLoaded] = useState(false);
 
   useEffect(() => {
@@ -73,6 +67,7 @@ export default function Home({ projects, employments }) {
           <Intro />
           <IconBlock />
           <About />
+          <Projects data={projects} />
 
           {/* <Header />
           <HomeScreen />
@@ -109,15 +104,20 @@ export async function getServerSideProps() {
         start
         end
       }
+      skills(orderBy: id_DESC) {
+        id
+        skill
+      }
     }
   `;
 
-  const { projects, employments } = await graphcms.request(QUERY);
+  const { projects, employments, skills } = await graphcms.request(QUERY);
 
   return {
     props: {
       projects,
       employments,
+      skills,
     },
   };
 }

@@ -21,7 +21,7 @@ const cloudSkills = [
 ];
 const designSkills = ["Figma", "Vectr", "Adobe XD"];
 
-function Skills() {
+function SkillsOld() {
   return (
     <div
       id="skills"

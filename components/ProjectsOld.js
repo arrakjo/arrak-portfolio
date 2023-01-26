@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-function Projects({ projectData }) {
+function ProjectsOld({ projectData }) {
   return (
     <div
       id="projects"
