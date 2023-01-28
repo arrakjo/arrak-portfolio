@@ -26,7 +26,7 @@ export default function Home({ projects, employments, skills }) {
   return (
     <>
       {domLoaded ? (
-        <div className="w-full h-full max-w-7xl mx-auto">
+        <div className="w-full h-full max-w-7xl mx-auto overflow-x-hidden">
           <Head>
             <title>{pageTitle}</title>
             <meta name="description" content={description} />
@@ -65,8 +65,8 @@ export default function Home({ projects, employments, skills }) {
           </Head>
 
           <Intro />
-          <IconBlock />
           <About />
+          <IconBlock />
           <Projects data={projects} />
 
           {/* <Header />
@@ -89,6 +89,7 @@ export async function getServerSideProps() {
     {
       projects(orderBy: createdAt_ASC) {
         id
+        projectType
         name
         url
         sourceUrl
