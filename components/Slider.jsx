@@ -20,6 +20,8 @@ function Slider({ data }) {
       gap={20}
       loop
       showDots={true}
+      dotColorActive="#ff9c60"
+      dotColorInactive="#eee"
       containerStyle={styles}
     >
       {data.slice(0, 7).map((item) => (
