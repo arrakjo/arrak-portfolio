@@ -1,4 +1,5 @@
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Carousel from "better-react-carousel";
 import Image from "next/image";
@@ -10,7 +11,6 @@ function Slider({ data }) {
     height: "100%",
     padding: "20px 0",
     borderRadius: "18px",
-    backgroundColor: "#130102",
   };
 
   return (
@@ -51,7 +51,10 @@ function Slider({ data }) {
                     rel="noreferrer"
                   >
                     <span>View live</span>
-                    <span className="text-3xl">→</span>
+                    <FontAwesomeIcon
+                      icon={faArrowRightLong}
+                      className="text-lg"
+                    />
                   </a>
                 </Link>
               )}
