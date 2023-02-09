@@ -62,7 +62,7 @@ export default function Home({ projects, employments }) {
 export async function getServerSideProps() {
   const QUERY = gql`
     {
-      projects(orderBy: createdAt_ASC) {
+      projects(orderBy: position_ASC) {
         id
         name
         url
