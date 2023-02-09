@@ -7,8 +7,6 @@ import HomeScreen from "../components/HomeScreen";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import { GraphQLClient, gql } from "graphql-request";
-import { useState, useEffect } from "react";
-import Loader from "../components/Loader";
 
 let pageTitle = "Joosep Arrak - Front-end Developer";
 let description = "Personal Portfolio of Joosep Arrak - Front-end Developer";
