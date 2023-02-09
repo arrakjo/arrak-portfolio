@@ -37,7 +37,7 @@ function Experience({ employmentData }) {
           </p>
         </div>
 
-        {employmentData.splice(0, 4).map((item) => (
+        {employmentData.map((item) => (
           <div key={item.id} className="flex w-full px-5 mt-2 mb-10">
             {/* XP "bar" CSS */}
             <div>
