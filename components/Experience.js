@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
-import ExperienceSVG from "../public/img/Experience.svg";
+import ExperienceSVG from "../public/img/note.svg";
 
 function Experience({ employmentData }) {
   return (
@@ -18,8 +18,8 @@ function Experience({ employmentData }) {
         <Image
           src={ExperienceSVG}
           alt="Experience"
-          width={555}
-          height={413}
+          width={314}
+          height={309}
           priority
         />
       </motion.div>

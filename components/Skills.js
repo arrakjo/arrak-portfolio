@@ -1,25 +1,33 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
-import SkillsSVG from "../public/img/Skills.svg";
+import SkillsSVG from "../public/img/cli.svg";
 
 const techSkills = [
   "Next.js",
   "React.js",
   "Javascript",
-  "HTML/CSS",
+  "HTML",
+  "CSS/SCSS",
   "Tailwind CSS",
-  "Styled Components",
-  "React Native",
+  "Drupal",
   "WordPress",
 ];
 const cloudSkills = [
-  "Firebase",
   "Sanity CMS",
-  "GraphCMS",
+  "Hygraph",
+  "Firebase",
   "Vercel",
+  "Netlify",
   "Google Cloud Platform",
 ];
-const designSkills = ["Figma", "Vectr", "Adobe XD"];
+const toolSkills = [
+  "Figma",
+  "Git",
+  "GitHub",
+  "Bitbucket",
+  "Jira",
+  "Confluence",
+];
 
 function Skills() {
   return (
@@ -34,7 +42,7 @@ function Skills() {
         transition={{ delay: 0.3 }}
         className="w-1/2 xl:pl-40 hidden xl:flex items-center justify-center pr-16"
       >
-        <Image src={SkillsSVG} alt="Skills" width={402} height={526} priority />
+        <Image src={SkillsSVG} alt="Skills" width={314} height={174} priority />
       </motion.div>
 
       <div className="w-full xl:w-1/2 2xl:pl-20 h-full flex flex-col items-center justify-center">
@@ -80,10 +88,10 @@ function Skills() {
           </div>
           <div className="mt-10">
             <h3 className="text-2xl md:text-4xl font-medium mb-2 md:mb-3">
-              Design.
+              Tools.
             </h3>
             <div className="flex w-full md:w-2/3 flex-wrap">
-              {designSkills.map((i) => (
+              {toolSkills.map((i) => (
                 <p
                   key={i}
                   className="uppercase text-sm md:text-base border flex justify-center items-center w-max mr-4 mt-4 border-[#ececec] py-2 px-3 "
