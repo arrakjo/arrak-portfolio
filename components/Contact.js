@@ -39,8 +39,8 @@ function Contact() {
                 width={36}
                 height={36}
               />
-              <a href="mailto:jooseparrak@hotmail.com" className="ml-6">
-                jooseparrak@hotmail.com
+              <a href="mailto:jooseparrak@gmail.com" className="ml-6">
+                jooseparrak@gmail.com
               </a>
             </div>
             <div className="flex items-center text-base mb-4">
@@ -89,11 +89,13 @@ function Contact() {
                 I&apos;ve built this page using
               </h4>
               <p className="text-xs uppercase mt-2">
-                Next.js / Tailwind / GraphCMS / Vercel
+                Next.js / Tailwind / GraphQL / Hygraph / Vercel
               </p>
             </div>
 
-            <footer className="text-sm mt-16">&copy; Joosep Arrak 2022</footer>
+            <footer className="text-sm mt-16">
+              &copy; Joosep Arrak {new Date().getFullYear()}
+            </footer>
           </div>
         </motion.div>
       </div>

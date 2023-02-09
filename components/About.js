@@ -53,7 +53,7 @@ function About() {
             transition={{ delay: 0.6 }}
             className="text-xl md:text-2xl font-medium mb-5 md:mb-6"
           >
-            Specialized with <span className="text-[#466EC3] ">React</span>.
+            In love with <span className="text-[#466EC3] ">React</span>.
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 100 }}
@@ -71,7 +71,7 @@ function About() {
             transition={{ delay: 0.8 }}
             className="text-xl md:text-2xl font-medium mb-5 md:mb-6 md:pt-3 md:leading-4"
           >
-            I also entertain —<br />
+            I can entertain —<br />
             sing and play guitar{" "}
             <span>
               <Image
