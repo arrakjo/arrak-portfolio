@@ -11,6 +11,8 @@ const techSkills = [
   "Tailwind CSS",
   "Drupal",
   "WordPress",
+  "Webpack",
+  "Gulp",
 ];
 const cloudSkills = [
   "Sanity CMS",
