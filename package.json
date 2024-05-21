@@ -1,5 +1,9 @@
 {
   "name": "arrak-portfolio",
+  "engines": {
+    "node": "^18",
+    "npm": "^9"
+  },
   "version": "0.1.0",
   "private": true,
   "scripts": {
