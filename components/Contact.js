@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-function Contact() {
+export default function Contact() {
   return (
     <div
       id="contact"
@@ -117,5 +117,3 @@ function Contact() {
     </div>
   );
 }
-
-export default Contact;

@@ -5,11 +5,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 
-function Projects({ projectData }) {
+export default function Projects({ projectData }) {
   return (
     <div
       id="projects"
-      className="flex flex-col justify-center items-center bg-[#ECECEC] text-[#232323] w-full h-full md:py-48 py-32"
+      className="flex flex-col justify-center items-center bg-[#232323] text-[#ECECEC] w-full h-full md:py-48 py-32"
     >
       <div className="flex lg:w-2/3 w-full justify-center items-center">
         <motion.p
@@ -19,7 +19,7 @@ function Projects({ projectData }) {
           transition={{ delay: 0.4 }}
           className="text-base mb-[22px] "
         >
-          <span className="font-bold text-[#111111] ">/</span> Projects
+          <span className="font-bold text-[#ECECEC] ">/</span> Projects
         </motion.p>
       </div>
 
@@ -43,7 +43,7 @@ function Projects({ projectData }) {
             {projectData.map((item) => (
               <SwiperSlide
                 key={item.id}
-                className="h-[570px] md:h-[470px] bg-[#F9F9F9] overflow-hidden md:rounded"
+                className="h-[570px] md:h-[470px] bg-[#202020] overflow-hidden md:rounded"
               >
                 <div className="w-full h-full md:flex md:flex-nowrap md:items-center">
                   <div className="w-full md:w-2/3 h-64 md:h-full relative md:absolute md:top-0 md:left-0 md:bottom-0">
@@ -57,10 +57,10 @@ function Projects({ projectData }) {
                     />
                   </div>
                   <div className="w-full md:w-1/3 flex flex-col px-4 py-16 md:p-4 md:absolute md:top-1/2 md:-translate-y-1/2 md:right-0">
-                    <h3 className="text-3xl font-semibold opacity-90">
+                    <h3 className="text-3xl font-medium opacity-90">
                       {item.name}
                     </h3>
-                    <p className="text-xs uppercase text-[#333] mt-1">
+                    <p className="text-xs uppercase text-[#e3e3e3] mt-1">
                       {item.description}
                     </p>
                     <div className="w-full flex py-5 gap-3 items-center rounded-b-md">
@@ -68,7 +68,7 @@ function Projects({ projectData }) {
                         href={item.url}
                         target="_blank"
                         rel="noreferrer"
-                        className="w-2/5 flex justify-center items-center px-4 py-2 text-xs font-medium md:px-4 md:py-2 md:text-sm hover:opacity-90 duration-150 uppercase border-2 border-[#333] bg-[#333] text-[#ECECEC]"
+                        className="w-2/5 flex justify-center items-center px-4 py-2 text-xs font-medium md:px-4 md:py-2 md:text-sm hover:border-white hover:bg-white duration-150 uppercase border border-[#ECECEC] bg-[#ECECEC] text-[#232323]"
                         aria-label="View live site"
                       >
                         Live
@@ -78,7 +78,7 @@ function Projects({ projectData }) {
                           href={item.sourceUrl}
                           target="_blank"
                           rel="noreferrer"
-                          className="w-2/5 flex justify-center items-center px-4 py-2 text-xs font-medium md:px-4 md:py-2 md:text-sm duration-150 uppercase border-2 border-[#333] text-[#333] hover:bg-[#F7F7F7] hover:border-[#444]"
+                          className="w-2/5 flex justify-center items-center px-4 py-2 text-xs font-medium md:px-4 md:py-2 md:text-sm duration-150 uppercase border border-[#ECECEC] text-[#ECECEC] hover:bg-[#111] hover:border-[#ECECEC]"
                           aria-label="View source files"
                         >
                           Source
@@ -95,5 +95,3 @@ function Projects({ projectData }) {
     </div>
   );
 }
-
-export default Projects;

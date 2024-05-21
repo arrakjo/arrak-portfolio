@@ -8,10 +8,11 @@ import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import { GraphQLClient, gql } from "graphql-request";
 
-let pageTitle = "Joosep Arrak - Front-end Developer";
-let description = "Personal Portfolio of Joosep Arrak - Front-end Developer";
+let pageTitle = "Joosep Arrak - Frontend Software Engineer";
+let description =
+  "Personal Portfolio of Joosep Arrak - Frontend Software Engineer";
 let currentURL = "https://www.arrak.dev";
-let siteName = "Front-end Developer Joosep Arrak";
+let siteName = "Frontend Software Engineer Joosep Arrak";
 let previewImage = "https://www.arrak.dev/img/socialcardlarge.png";
 let twitterHandle = "@arrakdev";
 
@@ -51,8 +52,8 @@ export default function Home({ projects, employments }) {
         <HomeScreen />
         <About />
         <Skills />
-        <Projects projectData={projects} />
         <Experience employmentData={employments} />
+        <Projects projectData={projects} />
         <Contact />
       </div>
     </>

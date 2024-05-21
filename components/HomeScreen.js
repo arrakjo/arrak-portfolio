@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-function HomeScreen() {
+export default function HomeScreen() {
   return (
     <div
       id="home"
@@ -25,13 +25,11 @@ function HomeScreen() {
           transition={{ delay: 1.2 }}
           className="leading-none mt-[52px] text-3xl md:text-4xl font-medium"
         >
-          Front-end
+          Frontend
           <br />
-          Developer.
+          Software Engineer.
         </motion.h2>
       </div>
     </div>
   );
 }
-
-export default HomeScreen;

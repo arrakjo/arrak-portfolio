@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-function About() {
+export default function About() {
   return (
     <div
       id="about"
@@ -44,7 +44,7 @@ function About() {
           >
             Self-taught
             <br />
-            <span className="text-[#466EC3] ">Front-end Developer</span>.
+            <span className="text-[#466EC3] ">Software Engineer</span>.
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 100 }}
@@ -53,7 +53,9 @@ function About() {
             transition={{ delay: 0.6 }}
             className="text-xl md:text-2xl font-medium mb-5 md:mb-6"
           >
-            In love with <span className="text-[#466EC3] ">React</span>.
+            Specialized with
+            <br />
+            <span className="text-[#466EC3] ">React & TypeScript</span>.
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 100 }}
@@ -69,18 +71,9 @@ function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.8 }}
-            className="text-xl md:text-2xl font-medium mb-5 md:mb-6 md:pt-3 md:leading-4"
+            className="text-xl md:text-2xl font-medium mb-5 md:mb-6"
           >
-            I can entertain —<br />
-            sing and play guitar{" "}
-            <span>
-              <Image
-                src="https://ik.imagekit.io/c0wz4am8etl/Arrak_Portfolio/guitar.png"
-                alt="Guitar"
-                width="36px"
-                height="36px"
-              />
-            </span>
+            Also interested in game development
           </motion.p>
 
           {/* Ellipse image, only visible on smaller screens */}
@@ -110,7 +103,7 @@ function About() {
               href="https://linkedin.com/in/jooseparrak"
               target="_blank"
               rel="noreferrer"
-              className="uppercase cursor-pointer bg-[#232323] text-[#ECECEC] p-4 text-sm font-medium md:p-4 md:text-base hover:opacity-90 duration-150"
+              className="uppercase cursor-pointer bg-[#232323] text-[#ECECEC] p-4 text-sm font-medium md:text-base hover:bg-[#111] duration-150"
               aria-label="View resume"
             >
               Full Resume
@@ -136,5 +129,3 @@ function About() {
     </div>
   );
 }
-
-export default About;
