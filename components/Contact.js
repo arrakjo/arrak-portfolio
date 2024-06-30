@@ -1,20 +1,13 @@
-import Image from "next/image";
-import { motion } from "framer-motion";
+import Image from "next/legacy/image";
 
 export default function Contact() {
   return (
     <div
       id="contact"
-      className="flex justify-center items-center bg-[#ECECEC] text-[#232323] w-full h-full md:py-48 py-32"
+      className="flex justify-center items-center bg-[#FFFAEA] text-[#052B2F] w-full h-full md:py-48 py-32"
     >
       <div className="w-full xl:w-1/2 2xl:pl-40 h-full flex flex-col items-center justify-center">
-        <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          className="w-full xl:w-2/3 px-10"
-        >
+        <div className="w-full xl:w-2/3 px-10">
           <p className="text-base mb-[22px] ">
             <span className="font-bold text-[#111111] ">/</span> Contact
           </p>
@@ -24,8 +17,8 @@ export default function Contact() {
               <Image
                 src="https://ik.imagekit.io/c0wz4am8etl/Arrak_Portfolio/profile_0t6ZuwWdw.jpg"
                 alt="Live alt"
-                width="154px"
-                height="154px"
+                width={154}
+                height={154}
                 className="rounded-full scale-75 sm:scale-100"
               />
             </span>
@@ -97,23 +90,17 @@ export default function Contact() {
               &copy; Joosep Arrak {new Date().getFullYear()}
             </footer>
           </div>
-        </motion.div>
+        </div>
       </div>
       {/* Full image, only visible on larger screens */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.3 }}
-        className="w-1/2 hidden lg:flex items-center justify-center pr-16"
-      >
+      <div className="w-1/2 hidden lg:flex items-center justify-center pr-16">
         <Image
           src="https://ik.imagekit.io/c0wz4am8etl/Arrak_Portfolio/justme.jpg"
           alt="Just me"
           width={387}
           height={580}
         />
-      </motion.div>
+      </div>
     </div>
   );
 }
