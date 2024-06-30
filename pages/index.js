@@ -7,6 +7,8 @@ import HomeScreen from "../components/HomeScreen";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import { GraphQLClient, gql } from "graphql-request";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 let pageTitle = "Joosep Arrak - Frontend Software Engineer";
 let description =
@@ -21,7 +23,7 @@ const graphcms = new GraphQLClient(process.env.GRAPH_CMS_MASTER);
 export default function Home({ projects, employments }) {
   return (
     <>
-      <div className="bg-[#232323] h-full text-[#ECECEC]">
+      <div className="bg-[#052B2F] h-full text-[#FFFAEA]">
         <Head>
           <title>{pageTitle}</title>
           <meta name="description" content={description} />
@@ -56,6 +58,9 @@ export default function Home({ projects, employments }) {
         <Projects projectData={projects} />
         <Contact />
       </div>
+
+      <Analytics />
+      <SpeedInsights />
     </>
   );
 }
