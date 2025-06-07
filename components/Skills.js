@@ -1,5 +1,5 @@
 import { skills } from "./utils/skills.utils";
-import { CodeIcon } from "@phosphor-icons/react";
+import { CodeIcon } from "@phosphor-icons/react/dist/csr/Code";
 
 export default function Skills() {
   const { tech, cloud, tools } = skills;

@@ -17,4 +17,7 @@ module.exports = {
     locales: ["en"],
     defaultLocale: "en",
   },
+  experimental: {
+    optimizePackageImports: ["@phosphor-icons/react"],
+  },
 };

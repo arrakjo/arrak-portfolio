@@ -1,4 +1,5 @@
-import { LinkedinLogoIcon, RewindIcon } from "@phosphor-icons/react";
+import { LinkedinLogoIcon } from "@phosphor-icons/react/dist/csr/LinkedinLogo";
+import { RewindIcon } from "@phosphor-icons/react/dist/csr/Rewind";
 
 function Experience({ employmentData }) {
   return (

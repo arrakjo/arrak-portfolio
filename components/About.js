@@ -1,4 +1,4 @@
-import { LinkedinLogoIcon } from "@phosphor-icons/react";
+import { LinkedinLogoIcon } from "@phosphor-icons/react/dist/csr/LinkedinLogo";
 import Image from "next/legacy/image";
 
 export default function About() {

@@ -1,4 +1,6 @@
-import { LinkedinLogoIcon, ListIcon, XIcon } from "@phosphor-icons/react";
+import { LinkedinLogoIcon } from "@phosphor-icons/react/dist/csr/LinkedinLogo";
+import { ListIcon } from "@phosphor-icons/react/dist/csr/List";
+import { XIcon } from "@phosphor-icons/react/dist/csr/X";
 import { useEffect, useState } from "react";
 
 const NAV_ITEMS = [
