@@ -13,6 +13,7 @@
     "email": "jooseparrak@gmail.com",
     "url": "https://arrak.dev"
   },
+  "license": "MIT",
   "engines": {
     "node": "^22",
     "npm": "^10"
