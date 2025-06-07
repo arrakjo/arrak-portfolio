@@ -1,15 +1,23 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-};
-
 module.exports = {
-  nextConfig,
+  reactStrictMode: true,
   images: {
-    domains: ["ik.imagekit.io", "media.graphassets.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "ik.imagekit.io",
+      },
+      {
+        protocol: "https",
+        hostname: "media.graphassets.com",
+      },
+    ],
   },
   i18n: {
     locales: ["en"],
     defaultLocale: "en",
+  },
+  experimental: {
+    optimizePackageImports: ["@phosphor-icons/react"],
   },
 };

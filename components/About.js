@@ -1,33 +1,34 @@
+import { LinkedinLogoIcon } from "@phosphor-icons/react/dist/csr/LinkedinLogo";
 import Image from "next/legacy/image";
 
 export default function About() {
   return (
     <div
       id="about"
-      className="flex justify-center items-center bg-[#FFFAEA] text-[#052B2F] w-full h-full md:py-48 py-32"
+      className="flex justify-center items-center bg-[#FFFAEA] text-[#17191a] w-full h-full md:py-48 py-32"
     >
       <div className="w-full xl:w-1/2 2xl:pl-40 h-full flex flex-col items-center justify-center">
         <div className="w-full xl:w-2/3 px-10">
           <p className="text-base mb-[22px] ">
-            <span className="font-bold text-[#111111] ">/</span> About me
+            <span className="font-medium text-[#111111] ">/</span> About me
           </p>
-          <p className="text-xl md:text-2xl font-medium mb-5 md:mb-6">
-            I&apos;m from <span className="text-[#466EC3]">Estonia</span>.
+          <p className="text-xl md:text-2xl font-light mb-5 md:mb-6">
+            I&apos;m from <span className="font-medium">Estonia</span>.
           </p>
-          <p className="text-xl md:text-2xl font-medium mb-5 md:mb-6">
+          <p className="text-xl md:text-2xl font-light mb-5 md:mb-6">
             Self-taught
             <br />
-            <span className="text-[#466EC3] ">Software Engineer</span>.
+            <span className="font-medium ">Software Engineer</span>.
           </p>
-          <p className="text-xl md:text-2xl font-medium mb-5 md:mb-6">
+          <p className="text-xl md:text-2xl font-light mb-5 md:mb-6">
             Specialized with
             <br />
-            <span className="text-[#466EC3] ">React & TypeScript</span>.
+            <span className="font-medium ">React & TypeScript</span>.
           </p>
-          <p className="text-xl md:text-2xl font-medium mb-5 md:mb-6">
-            I build &#38; design stuff.
+          <p className="text-xl md:text-2xl font-light mb-5 md:mb-6">
+            I can design &#38; build stuff.
           </p>
-          <p className="text-xl md:text-2xl font-medium mb-5 md:mb-6">
+          <p className="text-xl md:text-2xl font-light mb-5 md:mb-6">
             Also interested in game development.
           </p>
 
@@ -46,9 +47,12 @@ export default function About() {
               href="https://linkedin.com/in/jooseparrak"
               target="_blank"
               rel="noreferrer"
-              className="uppercase cursor-pointer bg-[#052B2F] text-[#FFFAEA] p-4 text-sm font-medium md:text-base hover:bg-[#111] duration-150"
+              className="w-fit flex justify-center items-center mt-16 px-4 py-3 text-sm font-light md:text-base hover:bg-[#111] duration-150 uppercase bg-[#17191a] text-[#FFFAEA]"
               aria-label="View resume"
             >
+              <span className="mr-2">
+                <LinkedinLogoIcon size={24} />
+              </span>
               Full Resume
             </a>
           </div>

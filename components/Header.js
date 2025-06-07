@@ -1,6 +1,16 @@
-import { MenuAlt1Icon, XIcon } from "@heroicons/react/outline";
+import { LinkedinLogoIcon } from "@phosphor-icons/react/dist/csr/LinkedinLogo";
+import { ListIcon } from "@phosphor-icons/react/dist/csr/List";
+import { XIcon } from "@phosphor-icons/react/dist/csr/X";
 import { useEffect, useState } from "react";
-import Image from "next/legacy/image";
+
+const NAV_ITEMS = [
+  { href: "#home", label: "Home" },
+  { href: "#about", label: "About" },
+  { href: "#skills", label: "Skills" },
+  { href: "#experience", label: "Experience" },
+  { href: "#projects", label: "Projects" },
+  { href: "#contact", label: "Contact" },
+];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,70 +24,42 @@ export default function Header() {
     } else {
       document.body.style.overflow = "unset";
     }
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
   }, [menuOpen]);
 
   return (
-    <header className="flex z-10 w-full bg-[#052B2F] justify-between p-7 items-center border-b border-[#FFFAEA] fixed">
-      <a href="#home" className="text-4xl font-medium">
-        Arrak.
+    <header className="flex z-10 w-full bg-[#17191a] justify-between p-7 items-center border-b border-[#FFFAEA] fixed">
+      <a href="#home" className="text-4xl font-thin">
+        Arrak
       </a>
 
-      <button onClick={openMenu} aira-label="Open menu">
-        <MenuAlt1Icon className="h-12 rotate-180 cursor-pointer" />
+      <button onClick={openMenu} aria-label="Open menu">
+        <ListIcon size={48} weight="thin" className="cursor-pointer" />
       </button>
 
       {menuOpen && (
         <div className="absolute z-50 top-0 right-0">
-          <nav className="md:w-96 w-72 h-screen bg-[#052B2F] flex flex-col justify-between py-7">
+          <nav className="md:w-96 w-72 h-screen bg-[#17191a] flex flex-col justify-between py-7">
             <div className="flex justify-end pr-7">
               <button onClick={closeMenu} aria-label="Close">
-                <XIcon className="h-12 cursor-pointer" />
+                <XIcon size={48} weight="thin" className="cursor-pointer" />
               </button>
             </div>
 
-            <div className="flex flex-col pl-8 font-medium text-xl md:text-2xl space-y-3 md:space-y-4">
-              <a
-                className="hover:opacity-90 duration-150"
-                onClick={closeMenu}
-                href="#home"
-              >
-                Home
-              </a>
-              <a
-                className="hover:opacity-90 duration-150"
-                onClick={closeMenu}
-                href="#about"
-              >
-                About
-              </a>
-              <a
-                className="hover:opacity-90 duration-150"
-                onClick={closeMenu}
-                href="#skills"
-              >
-                Skills
-              </a>
-              <a
-                className="hover:opacity-90 duration-150"
-                onClick={closeMenu}
-                href="#experience"
-              >
-                Experience
-              </a>
-              <a
-                className="hover:opacity-90 duration-150"
-                onClick={closeMenu}
-                href="#projects"
-              >
-                Projects
-              </a>
-              <a
-                className="hover:opacity-90 duration-150"
-                onClick={closeMenu}
-                href="#contact"
-              >
-                Contact
-              </a>
+            <div className="flex flex-col pl-8 font-thin text-xl md:text-2xl space-y-3 md:space-y-4">
+              {NAV_ITEMS.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  onClick={closeMenu}
+                  className="hover:text-[#FFFAEA] duration-150"
+                >
+                  {item.label}
+                </a>
+              ))}
             </div>
 
             <div>
@@ -85,16 +67,11 @@ export default function Header() {
                 onClick={() =>
                   window.open("https://linkedin.com/in/jooseparrak", "_blank")
                 }
-                className="w-fit flex justify-center items-center mt-16 ml-8 mb-12 md:mb-4 px-4 py-2 text-sm font-medium md:px-4 md:py-2 hover:bg-white duration-150 uppercase bg-[#FFFAEA] text-[#052B2F]"
+                className="w-fit flex justify-center items-center cursor-pointer mt-16 ml-8 mb-12 md:mb-4 px-4 py-2 text-sm font-light md:px-4 md:py-2 hover:bg-white duration-150 uppercase bg-[#FFFAEA] text-[#17191a]"
                 aria-label="View resume"
               >
-                <span className="mr-4">
-                  <Image
-                    src="https://ik.imagekit.io/c0wz4am8etl/Arrak_Portfolio/linkedin_8ds_suOKj.png"
-                    alt="in"
-                    width={24}
-                    height={24}
-                  />
+                <span className="mr-2">
+                  <LinkedinLogoIcon size={24} />
                 </span>
                 Full Resume
               </button>

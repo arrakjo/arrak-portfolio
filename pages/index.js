@@ -23,7 +23,7 @@ const graphcms = new GraphQLClient(process.env.GRAPH_CMS_MASTER);
 export default function Home({ projects, employments }) {
   return (
     <>
-      <div className="bg-[#052B2F] h-full text-[#FFFAEA]">
+      <div className="bg-[#17191a] h-full text-[#FFFAEA]">
         <Head>
           <title>{pageTitle}</title>
           <meta name="description" content={description} />

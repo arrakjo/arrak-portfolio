@@ -10,14 +10,5 @@ export const skills = {
     "WordPress",
   ],
   cloud: ["Vercel", "Hygraph", "Firebase", "Google Cloud"],
-  tools: [
-    "Figma",
-    "Git",
-    "GitHub",
-    "Bitbucket",
-    "Mac",
-    "Windows",
-    "Jira",
-    "Confluence",
-  ],
+  tools: ["Figma", "Git", "GitHub", "Mac/Windows", "Jira", "Confluence"],
 };
