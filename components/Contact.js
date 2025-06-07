@@ -40,17 +40,9 @@ export default function Contact() {
                 href="https://linkedin.com/in/jooseparrak"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-6 hidden md:inline"
+                className="ml-6"
               >
                 linkedin.com/in/jooseparrak
-              </a>
-              <a
-                href="https://linkedin.com/in/jooseparrak"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ml-6 md:hidden inline"
-              >
-                lnkdn.com/jooseparrak
               </a>
             </div>
             <div className="flex items-center text-base mb-4">
