@@ -2,7 +2,7 @@ import {
   AtIcon,
   GithubLogoIcon,
   LinkedinLogoIcon,
-} from "@phosphor-icons/react/dist/ssr";
+} from "@phosphor-icons/react";
 import Image from "next/legacy/image";
 
 export default function Contact() {
