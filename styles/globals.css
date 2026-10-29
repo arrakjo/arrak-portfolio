@@ -1,13 +1,6 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: "Urbanist";
-  src: url("/font/Urbanist-VariableFont_wght.ttf");
-  font-display: swap;
-}
-
 html {
-  font-family: "Urbanist", sans-serif;
   scroll-behavior: smooth;
 }
 

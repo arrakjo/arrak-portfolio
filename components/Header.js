@@ -63,10 +63,10 @@ export default function Header() {
             </div>
 
             <div>
-              <button
-                onClick={() =>
-                  window.open("https://linkedin.com/in/jooseparrak", "_blank")
-                }
+              <a
+                href="https://linkedin.com/in/jooseparrak"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-fit flex justify-center items-center cursor-pointer mt-16 ml-8 mb-12 md:mb-4 px-4 py-2 text-sm font-light md:px-4 md:py-2 hover:bg-white duration-150 uppercase bg-[#FFFAEA] text-[#17191a]"
                 aria-label="View resume"
               >
@@ -74,7 +74,7 @@ export default function Header() {
                   <LinkedinLogoIcon size={24} />
                 </span>
                 Full Resume
-              </button>
+              </a>
             </div>
           </nav>
         </div>

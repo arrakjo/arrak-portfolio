@@ -15,7 +15,7 @@ let description =
   "Personal Portfolio of Joosep Arrak - Frontend Software Engineer";
 let currentURL = "https://www.arrak.dev";
 let siteName = "Frontend Software Engineer Joosep Arrak";
-let previewImage = "https://www.arrak.dev/img/socialcardlarge.png";
+let previewImage = "https://www.arrak.dev/img/socialcard.jpg";
 let twitterHandle = "@arrakdev";
 
 const graphcms = new GraphQLClient(process.env.GRAPH_CMS_MASTER);
@@ -30,8 +30,10 @@ export default function Home({ projects, employments }) {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta charSet="utf-8" />
           <link rel="icon" href="/favicon.ico" />
+          <link rel="canonical" href={currentURL} />
 
           {/* Open Graph */}
+          <meta property="og:type" content="website" key="ogtype" />
           <meta property="og:url" content={currentURL} key="ogurl" />
           <meta property="og:image" content={previewImage} key="ogimage" />
           <meta property="og:site_name" content={siteName} key="ogsitename" />
@@ -65,7 +67,7 @@ export default function Home({ projects, employments }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const QUERY = gql`
     {
       projects(orderBy: position_ASC) {
@@ -95,5 +97,7 @@ export async function getServerSideProps() {
       projects,
       employments,
     },
+    // Regenerate in the background at most once per hour
+    revalidate: 3600,
   };
 }
