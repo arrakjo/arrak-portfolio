@@ -45,7 +45,7 @@ function Experience({ employmentData }) {
           <a
             href="https://linkedin.com/in/jooseparrak"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="w-fit flex justify-center items-center mt-16 ml-11 px-4 py-3 text-sm font-light md:text-base hover:bg-[#111] duration-150 uppercase bg-[#17191a] text-[#FFFAEA]"
             aria-label="View resume"
           >

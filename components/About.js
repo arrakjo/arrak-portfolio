@@ -1,5 +1,5 @@
 import { LinkedinLogoIcon } from "@phosphor-icons/react/dist/csr/LinkedinLogo";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -46,7 +46,7 @@ export default function About() {
             <a
               href="https://linkedin.com/in/jooseparrak"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="w-fit flex justify-center items-center mt-16 px-4 py-3 text-sm font-light md:text-base hover:bg-[#111] duration-150 uppercase bg-[#17191a] text-[#FFFAEA]"
               aria-label="View resume"
             >

@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -38,9 +38,9 @@ export default function Projects({ projectData }) {
                     <Image
                       src={item.image[0].url}
                       alt={item.name}
-                      layout="fill"
-                      objectFit="cover"
-                      className="w-full h-full"
+                      fill
+                      sizes="(min-width: 768px) 66vw, 100vw"
+                      className="object-cover"
                     />
                   </div>
                   <div className="w-full md:w-1/3 flex flex-col px-4 py-16 md:p-4 md:absolute md:top-1/2 md:-translate-y-1/2 md:right-0">
@@ -54,7 +54,7 @@ export default function Projects({ projectData }) {
                       <a
                         href={item.url}
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                         className="w-2/5 flex justify-center items-center px-4 py-2 text-xs font-light md:px-4 md:py-2 md:text-sm hover:border-white hover:bg-white duration-150 uppercase border border-[#FFFAEA] bg-[#FFFAEA] text-[#17191a]"
                         aria-label="View live site"
                       >
@@ -64,7 +64,7 @@ export default function Projects({ projectData }) {
                         <a
                           href={item.sourceUrl}
                           target="_blank"
-                          rel="noreferrer"
+                          rel="noopener noreferrer"
                           className="w-2/5 flex justify-center items-center px-4 py-2 text-xs font-light md:px-4 md:py-2 md:text-sm duration-150 uppercase border border-[#FFFAEA] text-[#FFFAEA] hover:bg-[#111] hover:border-[#FFFAEA]"
                           aria-label="View source files"
                         >
