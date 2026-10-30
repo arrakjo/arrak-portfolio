@@ -12,7 +12,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 
 let pageTitle = "Joosep Arrak - Product Engineer, Frontend & AI-native";
 let description =
-  "Joosep Arrak builds product features end to end with React, TypeScript and Node.js. Led the Gantt timeline for Projects at Pipedrive.";
+  "Joosep Arrak builds product features end to end with React, TypeScript and Node.js. Customer focused & driving impact.";
 let currentURL = "https://www.arrak.dev";
 let siteName = "Joosep Arrak - Product Engineer";
 let previewImage = "https://www.arrak.dev/img/socialcard.jpg";
