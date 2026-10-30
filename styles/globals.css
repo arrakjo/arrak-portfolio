@@ -24,10 +24,6 @@ html {
   }
 }
 
-.swiper {
-  --swiper-navigation-color: #444;
-}
-
 /* width */
 ::-webkit-scrollbar {
   width: 8px;
