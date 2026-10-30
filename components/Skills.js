@@ -11,7 +11,7 @@ export default function Skills() {
         <CodeIcon size={120} weight="thin" />
       </div>
 
-      <div className="w-full xl:w-1/2 2xl:pl-20 h-full flex flex-col items-center justify-center">
+      <div className="w-full xl:w-1/2 2xl:pl-20 h-full flex flex-col justify-center">
         <div className="px-10">
           <p className="text-base mb-[22px] ">
             <span className="font-light text-[#F1F1F1] ">/</span> Skills
