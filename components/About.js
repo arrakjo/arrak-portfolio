@@ -18,7 +18,7 @@ export default function About() {
             working remotely.
           </p>
           <p className="text-xl md:text-2xl font-light mb-5 md:mb-6">
-            <span className="font-medium ">Product Engineer</span>,
+            <span className="font-medium ">Software Engineer</span>,
             <br />
             frontend first.
           </p>

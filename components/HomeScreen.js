@@ -61,7 +61,7 @@ export default function HomeScreen() {
         </h1>
 
         <h2 className="mt-8 text-2xl md:text-4xl font-light">
-          Product Engineer.{" "}
+          Software Engineer.{" "}
           <span className="font-thin">Frontend &amp; AI-native.</span>
         </h2>
 

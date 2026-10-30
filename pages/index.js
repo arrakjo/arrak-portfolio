@@ -10,11 +10,11 @@ import { GraphQLClient, gql } from "graphql-request";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-let pageTitle = "Joosep Arrak - Product Engineer, Frontend & AI-native";
+let pageTitle = "Joosep Arrak - Software Engineer, Frontend & AI-native";
 let description =
   "Joosep Arrak builds product features end to end with React, TypeScript and Node.js. Customer focused & driving impact.";
 let currentURL = "https://www.arrak.dev";
-let siteName = "Joosep Arrak - Product Engineer";
+let siteName = "Joosep Arrak - Software Engineer";
 let previewImage = "https://www.arrak.dev/img/socialcard.jpg";
 let twitterHandle = "@arrakdev";
 
