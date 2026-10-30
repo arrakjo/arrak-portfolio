@@ -27,9 +27,12 @@ export const highlights = [
   },
 ];
 
-export const alsoBuilt = [
-  "Project Overview",
-  "Guided Onboarding",
-  "Getting started sidebar",
-  "Note limits",
-];
+export const sideProject = {
+  tag: "Side project",
+  years: "2025 - present",
+  role: "Solo, full stack",
+  title: "Community platform for a live streamer",
+  summary:
+    "Started as a hobby gallery of community art, now used daily for more, such as schedule and Discord integrations. Next.js and PostgreSQL, with a Discord bot that sends uploaded media to a CDN.",
+  stat: { value: "~1400", label: "monthly visitors" },
+};
