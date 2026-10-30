@@ -4,23 +4,23 @@ import Contact from "../components/Contact";
 import Experience from "../components/Experience";
 import Header from "../components/Header";
 import HomeScreen from "../components/HomeScreen";
-import Projects from "../components/Projects";
+import SelectedWork from "../components/SelectedWork";
 import Skills from "../components/Skills";
 import { GraphQLClient, gql } from "graphql-request";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-let pageTitle = "Joosep Arrak - Frontend Software Engineer";
+let pageTitle = "Joosep Arrak - Product Engineer, Frontend & AI-native";
 let description =
-  "Personal Portfolio of Joosep Arrak - Frontend Software Engineer";
+  "Joosep Arrak builds product features end to end with React, TypeScript and Node.js. Led the Gantt timeline for Projects at Pipedrive.";
 let currentURL = "https://www.arrak.dev";
-let siteName = "Frontend Software Engineer Joosep Arrak";
+let siteName = "Joosep Arrak - Product Engineer";
 let previewImage = "https://www.arrak.dev/img/socialcard.jpg";
 let twitterHandle = "@arrakdev";
 
 const graphcms = new GraphQLClient(process.env.GRAPH_CMS_MASTER);
 
-export default function Home({ projects, employments }) {
+export default function Home({ employments }) {
   return (
     <>
       <div className="bg-[#17191a] h-full text-[#FFFAEA]">
@@ -55,9 +55,9 @@ export default function Home({ projects, employments }) {
         <Header />
         <HomeScreen />
         <About />
-        <Skills />
+        <SelectedWork />
         <Experience employmentData={employments} />
-        <Projects projectData={projects} />
+        <Skills />
         <Contact />
       </div>
 
@@ -70,16 +70,6 @@ export default function Home({ projects, employments }) {
 export async function getStaticProps() {
   const QUERY = gql`
     {
-      projects(orderBy: position_ASC) {
-        id
-        name
-        url
-        sourceUrl
-        description
-        image {
-          url
-        }
-      }
       employments(orderBy: createdAt_DESC) {
         id
         position
@@ -90,11 +80,10 @@ export async function getStaticProps() {
     }
   `;
 
-  const { projects, employments } = await graphcms.request(QUERY);
+  const { employments } = await graphcms.request(QUERY);
 
   return {
     props: {
-      projects,
       employments,
     },
     // Regenerate in the background at most once per hour

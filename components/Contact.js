@@ -18,7 +18,7 @@ export default function Contact() {
             Say hello!
             <span className="absolute top-[-112px] right-1 sm:right-20 lg:hidden inline ">
               <Image
-                src="https://ik.imagekit.io/c0wz4am8etl/Arrak_Portfolio/profile_0t6ZuwWdw.jpg"
+                src="https://eu-central-1.graphassets.com/AvcERQJfuQROEUI5hY2lcz/cmvux40ce1lh607ticmky4ojh"
                 alt="Live alt"
                 width={154}
                 height={154}
@@ -67,7 +67,15 @@ export default function Contact() {
             </div>
 
             <footer className="text-sm mt-16">
-              &copy; Joosep Arrak {new Date().getFullYear()}
+              <span>&copy; Joosep Arrak {new Date().getFullYear()}</span>
+              <span className="mx-2">•</span>
+              <a
+                href="https://github.com/arrakjo/arrak-portfolio"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View source
+              </a>
             </footer>
           </div>
         </div>
@@ -75,7 +83,7 @@ export default function Contact() {
       {/* Full image, only visible on larger screens */}
       <div className="w-1/2 hidden lg:flex items-center justify-center pr-16">
         <Image
-          src="https://ik.imagekit.io/c0wz4am8etl/Arrak_Portfolio/justme.jpg"
+          src="https://eu-central-1.graphassets.com/AvcERQJfuQROEUI5hY2lcz/cmvux40ce1lh607ticmky4ojh"
           alt="Just me"
           width={387}
           height={580}

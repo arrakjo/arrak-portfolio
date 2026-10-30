@@ -1,5 +1,5 @@
-import { LinkedinLogoIcon } from "@phosphor-icons/react/dist/csr/LinkedinLogo";
 import { RewindIcon } from "@phosphor-icons/react/dist/csr/Rewind";
+import ResumeButton from "./ResumeButton";
 
 function Experience({ employmentData }) {
   return (
@@ -42,18 +42,7 @@ function Experience({ employmentData }) {
             </div>
           ))}
 
-          <a
-            href="https://linkedin.com/in/jooseparrak"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-fit flex justify-center items-center mt-16 ml-11 px-4 py-3 text-sm font-light md:text-base hover:bg-[#111] duration-150 uppercase bg-[#17191a] text-[#FFFAEA]"
-            aria-label="View resume"
-          >
-            <span className="mr-2">
-              <LinkedinLogoIcon size={24} />
-            </span>
-            Full Resume
-          </a>
+          <ResumeButton className="mt-16 ml-11" />
         </div>
       </div>
     </>

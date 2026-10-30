@@ -1,5 +1,5 @@
-import { LinkedinLogoIcon } from "@phosphor-icons/react/dist/csr/LinkedinLogo";
 import Image from "next/image";
+import ResumeButton from "./ResumeButton";
 
 export default function About() {
   return (
@@ -9,27 +9,31 @@ export default function About() {
     >
       <div className="w-full xl:w-1/2 2xl:pl-40 h-full flex flex-col items-center justify-center">
         <div className="w-full xl:w-2/3 px-10">
-          <p className="text-base mb-[22px] ">
+          <p className="text-base mb-5.5">
             <span className="font-medium text-[#111111] ">/</span> About me
           </p>
           <p className="text-xl md:text-2xl font-light mb-5 md:mb-6">
-            I&apos;m from <span className="font-medium">Estonia</span>.
-          </p>
-          <p className="text-xl md:text-2xl font-light mb-5 md:mb-6">
-            Self-taught
+            I&apos;m from <span className="font-medium">Estonia</span>,
             <br />
-            <span className="font-medium ">Software Engineer</span>.
+            working remotely.
           </p>
           <p className="text-xl md:text-2xl font-light mb-5 md:mb-6">
-            Specialized with
+            <span className="font-medium ">Product Engineer</span>,
             <br />
-            <span className="font-medium ">React & TypeScript</span>.
+            frontend first.
           </p>
           <p className="text-xl md:text-2xl font-light mb-5 md:mb-6">
-            I can design &#38; build stuff.
+            Building with
+            <br />
+            <span className="font-medium ">React, TypeScript & Node.js</span>.
           </p>
           <p className="text-xl md:text-2xl font-light mb-5 md:mb-6">
-            Also interested in game development.
+            <span className="font-medium ">AI-native</span>: using Claude Code &
+            <br />
+            AI-tooling to plan, build and review.
+          </p>
+          <p className="text-xl md:text-2xl font-light mb-5 md:mb-6">
+            Self-taught.
           </p>
 
           {/* Ellipse image, only visible on smaller screens */}
@@ -43,18 +47,7 @@ export default function About() {
           </div>
 
           <div className="mt-10 md:mt-14">
-            <a
-              href="https://linkedin.com/in/jooseparrak"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-fit flex justify-center items-center mt-16 px-4 py-3 text-sm font-light md:text-base hover:bg-[#111] duration-150 uppercase bg-[#17191a] text-[#FFFAEA]"
-              aria-label="View resume"
-            >
-              <span className="mr-2">
-                <LinkedinLogoIcon size={24} />
-              </span>
-              Full Resume
-            </a>
+            <ResumeButton className="mt-16" />
           </div>
         </div>
       </div>

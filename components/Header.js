@@ -1,14 +1,14 @@
-import { LinkedinLogoIcon } from "@phosphor-icons/react/dist/csr/LinkedinLogo";
 import { ListIcon } from "@phosphor-icons/react/dist/csr/List";
 import { XIcon } from "@phosphor-icons/react/dist/csr/X";
 import { useEffect, useState } from "react";
+import ResumeButton from "./ResumeButton";
 
 const NAV_ITEMS = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
+  { href: "#work", label: "Work" },
   { href: "#experience", label: "Experience" },
-  { href: "#projects", label: "Projects" },
+  { href: "#skills", label: "Skills" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -31,7 +31,7 @@ export default function Header() {
   }, [menuOpen]);
 
   return (
-    <header className="flex z-10 w-full bg-[#17191a] justify-between p-7 items-center border-b border-[#FFFAEA] fixed">
+    <header className="flex z-10 w-full bg-[#17191a] justify-between px-10 py-7 items-center border-b border-[#FFFAEA] fixed">
       <a href="#home" className="text-4xl font-thin">
         Arrak
       </a>
@@ -63,18 +63,10 @@ export default function Header() {
             </div>
 
             <div>
-              <a
-                href="https://linkedin.com/in/jooseparrak"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-fit flex justify-center items-center cursor-pointer mt-16 ml-8 mb-12 md:mb-4 px-4 py-2 text-sm font-light md:px-4 md:py-2 hover:bg-white duration-150 uppercase bg-[#FFFAEA] text-[#17191a]"
-                aria-label="View resume"
-              >
-                <span className="mr-2">
-                  <LinkedinLogoIcon size={24} />
-                </span>
-                Full Resume
-              </a>
+              <ResumeButton
+                variant="light"
+                className="mt-16 ml-8 mb-12 md:mb-4"
+              />
             </div>
           </nav>
         </div>
