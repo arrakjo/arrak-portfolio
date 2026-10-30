@@ -13,9 +13,9 @@ export const highlights = [
     tag: "Deals",
     years: "2024 - 2025",
     role: "Frontend owner",
-    title: "Pipeline board",
+    title: "Pipeline board rebuild",
     summary:
-      "Owned the frontend of the core deals view. Merged two board implementations into one, made large boards fast, and upgraded the app to React 18.",
+      "Owned the frontend of the core deals view. Merged two board implementations into one, made large boards fast and modern.",
   },
   {
     tag: "Leads & Deals",
