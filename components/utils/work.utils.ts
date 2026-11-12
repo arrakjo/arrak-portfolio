@@ -1,7 +1,25 @@
 // Content for the "Selected work" section on the home page.
 // Links go to Pipedrive's public help-centre article for each feature.
 
-export const highlights = [
+export type Highlight = {
+  tag: string;
+  years: string;
+  role: string;
+  title: string;
+  summary: string;
+  link: { href: string; label: string };
+};
+
+export type SideProject = {
+  tag: string;
+  years: string;
+  role: string;
+  title: string;
+  summary: string;
+  stat: { value: string; label: string };
+};
+
+export const highlights: Highlight[] = [
   {
     tag: "Projects",
     years: "2026",
@@ -52,7 +70,7 @@ export const highlights = [
   },
 ];
 
-export const sideProject = {
+export const sideProject: SideProject = {
   tag: "Side project",
   years: "2025 - present",
   role: "Solo, full stack",

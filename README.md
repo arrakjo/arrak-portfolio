@@ -1,11 +1,11 @@
 # arrak-portfolio
 
-My personal portfolio at [arrak.dev](https://www.arrak.dev): a one-page site built with Next.js, React and Tailwind CSS.
+My personal portfolio at [arrak.dev](https://www.arrak.dev): a one-page site built with Next.js, React, TypeScript and Tailwind CSS.
 
 ## Stack
 
 - Next.js 16 (pages router, ISR)
-- React 19
+- React 19, TypeScript (strict)
 - Tailwind CSS 4
 - Hygraph (GraphQL) for the experience timeline
 - Vercel hosting, Analytics and Speed Insights
@@ -45,9 +45,9 @@ Requires Node 24 (see `.nvmrc`).
 | What                           | Where                                                                                                                   |
 | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
 | Experience timeline            | Hygraph `employments` (the page regenerates at most once per hour)                                                      |
-| Selected work and side project | `components/utils/work.utils.js`                                                                                        |
-| Skills                         | `components/utils/skills.utils.js`                                                                                      |
-| Resume button                  | `components/utils/resume.utils.js`: set `RESUME_PDF_URL` to a PDF in `public/` to switch it from LinkedIn to a download |
+| Selected work and side project | `components/utils/work.utils.ts`                                                                                        |
+| Skills                         | `components/utils/skills.utils.ts`                                                                                      |
+| Resume button                  | `components/utils/resume.utils.ts`: set `RESUME_PDF_URL` to a PDF in `public/` to switch it from LinkedIn to a download |
 
 ## Deployment
 

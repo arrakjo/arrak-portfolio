@@ -1,7 +1,12 @@
 import { RewindIcon } from "@phosphor-icons/react/dist/csr/Rewind";
 import ResumeButton from "./ResumeButton";
+import type { Employment } from "./utils/employment.utils";
 
-function Experience({ employmentData }) {
+type ExperienceProps = {
+  employmentData: Employment[];
+};
+
+function Experience({ employmentData }: ExperienceProps) {
   return (
     <>
       <div

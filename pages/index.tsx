@@ -9,18 +9,24 @@ import Skills from "../components/Skills";
 import { GraphQLClient, gql } from "graphql-request";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import type { GetStaticProps } from "next";
+import type { Employment } from "../components/utils/employment.utils";
 
-let pageTitle = "Joosep Arrak - Software Engineer, Frontend & AI-native";
-let description =
+type HomeProps = {
+  employments: Employment[];
+};
+
+const pageTitle = "Joosep Arrak - Software Engineer, Frontend & AI-native";
+const description =
   "Joosep Arrak builds product features end to end with React, TypeScript and Node.js. Customer focused & driving impact.";
-let currentURL = "https://www.arrak.dev";
-let siteName = "Joosep Arrak - Software Engineer";
-let previewImage = "https://www.arrak.dev/img/socialcard.jpg";
-let twitterHandle = "@arrakdev";
+const currentURL = "https://www.arrak.dev";
+const siteName = "Joosep Arrak - Software Engineer";
+const previewImage = "https://www.arrak.dev/img/socialcard.jpg";
+const twitterHandle = "@arrakdev";
 
-const graphcms = new GraphQLClient(process.env.GRAPH_CMS_MASTER);
+const graphcms = new GraphQLClient(process.env.GRAPH_CMS_MASTER ?? "");
 
-export default function Home({ employments }) {
+export default function Home({ employments }: HomeProps) {
   return (
     <>
       <div className="bg-[#17191a] h-full text-[#FFFAEA]">
@@ -67,7 +73,7 @@ export default function Home({ employments }) {
   );
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   const QUERY = gql`
     {
       employments(orderBy: createdAt_DESC) {
@@ -80,7 +86,9 @@ export async function getStaticProps() {
     }
   `;
 
-  const { employments } = await graphcms.request(QUERY);
+  const { employments } = await graphcms.request<{
+    employments: Employment[];
+  }>(QUERY);
 
   return {
     props: {
@@ -89,4 +97,4 @@ export async function getStaticProps() {
     // Regenerate in the background at most once per hour
     revalidate: 3600,
   };
-}
+};

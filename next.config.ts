@@ -1,4 +1,4 @@
-/** @type {import('next').NextConfig} */
+import type { NextConfig } from "next";
 
 const securityHeaders = [
   {
@@ -14,7 +14,7 @@ const securityHeaders = [
   },
 ];
 
-module.exports = {
+const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   images: {
@@ -36,3 +36,5 @@ module.exports = {
     return [{ source: "/:path*", headers: securityHeaders }];
   },
 };
+
+export default nextConfig;
