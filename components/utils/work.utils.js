@@ -1,4 +1,5 @@
 // Content for the "Selected work" section on the home page.
+// Links go to Pipedrive's public help-centre article for each feature.
 
 export const highlights = [
   {
@@ -7,15 +8,23 @@ export const highlights = [
     role: "Feature lead",
     title: "Gantt timeline for Projects",
     summary:
-      "Led a new timeline view for planning projects from first experiment to release, largely on my own. Chose a custom build over third-party libraries so it could keep growing, and kept it fast at scale.",
+      "Took a new timeline view from a fake door test to release for all users in about two months. Evaluated third-party libraries, chose a custom build, and kept it fast at scale. Then turned it into a shared component that powers a multi-project view.",
+    link: {
+      href: "https://support.pipedrive.com/en/article/projects-tasks-and-subtasks#use-the-gantt-view-for-timeline-planning",
+      label: "Gantt view",
+    },
   },
   {
     tag: "Deals",
     years: "2024 - 2025",
-    role: "Frontend owner",
+    role: "Project lead, frontend owner",
     title: "Pipeline board rebuild",
     summary:
-      "Owned the frontend of the core deals view. Merged two board implementations into one, made large boards fast and modern.",
+      "Owned the frontend of the core deals view and led the project that made the board customizable. Merged two board implementations into one, made large boards fast and modern.",
+    link: {
+      href: "https://support.pipedrive.com/en/article/pipeline-view",
+      label: "Pipeline view",
+    },
   },
   {
     tag: "Leads & Deals",
@@ -24,6 +33,22 @@ export const highlights = [
     title: "Lead Source",
     summary:
       "Added source tracking to leads and deals across many services, so teams can see where every deal came from.",
+    link: {
+      href: "https://support.pipedrive.com/en/article/lead-source-deals",
+      label: "Lead source",
+    },
+  },
+  {
+    tag: "Deals & Contacts",
+    years: "2023",
+    role: "Implementation lead",
+    title: "Note limits",
+    summary:
+      "Added note limits to every note editor, with server-side validation. Wrote a shared library so the limit logic and translations live in one place.",
+    link: {
+      href: "https://support.pipedrive.com/en/article/how-can-i-add-notes-to-a-deal-or-contact",
+      label: "Notes",
+    },
   },
 ];
 

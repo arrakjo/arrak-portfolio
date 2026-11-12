@@ -1,4 +1,5 @@
-import { alsoBuilt, highlights, sideProject } from "./utils/work.utils";
+import { ArrowUpRightIcon } from "@phosphor-icons/react/dist/csr/ArrowUpRight";
+import { highlights, sideProject } from "./utils/work.utils";
 
 export default function SelectedWork() {
   return (
@@ -14,7 +15,7 @@ export default function SelectedWork() {
           Highlights at Pipedrive.
         </h2>
 
-        <div className="grid gap-6 md:grid-cols-3 mb-12">
+        <div className="grid gap-6 md:grid-cols-2 mb-12">
           {highlights.map((item) => (
             <div
               key={item.title}
@@ -34,6 +35,15 @@ export default function SelectedWork() {
               <p className="text-sm font-light text-[#FFFAEA]/75 mt-4">
                 {item.summary}
               </p>
+              <a
+                href={item.link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-fit flex items-center mt-auto pt-6 text-sm font-light underline underline-offset-4 decoration-[#FFFAEA]/40 hover:decoration-[#FFFAEA] duration-150"
+              >
+                Help centre: {item.link.label}
+                <ArrowUpRightIcon size={16} className="ml-1" />
+              </a>
             </div>
           ))}
         </div>

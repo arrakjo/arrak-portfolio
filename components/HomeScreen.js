@@ -53,7 +53,7 @@ export default function HomeScreen() {
 
       <div className="relative w-full px-10">
         <p className="flex items-center gap-3 font-mono text-xs md:text-sm uppercase tracking-widest text-[#FFFAEA]/70">
-          Delivering software with impact
+          Idea · Experiment · Release
         </p>
 
         <h1 className="mt-8 font-thin leading-[0.9] tracking-tight text-[clamp(3.5rem,11vw,12rem)]">
@@ -66,8 +66,9 @@ export default function HomeScreen() {
         </h2>
 
         <p className="mt-6 max-w-xl text-base md:text-lg font-light text-[#FFFAEA]/80">
-          I build product features end to end, across frontend and backend, from
-          first idea to release. Customer focused.
+          I build product features end to end, across frontend and backend, and
+          lead the projects that ship them. Most recently I took a Gantt timeline
+          from a demand test to release for all users in about two months.
         </p>
 
         <div className="flex flex-wrap items-center gap-x-8 gap-y-4 mt-10">
